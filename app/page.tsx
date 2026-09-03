@@ -18,11 +18,11 @@ const pageMarkup = String.raw`
       <div class="hmr-opening-copy">
         <p class="hmr-kicker">FOR WOMEN WHO WANT TO CHOOSE THEIR OWN WAY</p>
         <h2 id="opening-title">
-          <span class="hmr-copy-pc"><i>変わりたい。</i><i>でも、何を選ぶか</i><i>まだ分からない。</i></span>
-          <span class="hmr-copy-sp"><i>変わりたい。</i><i>でも、何を選べば</i><i>いいか、まだ</i><i>分からない。</i></span>
+          <span class="hmr-copy-pc"><i>変わる時代に、</i><i>変わらない</i><i>「自分軸」を。</i></span>
+          <span class="hmr-copy-sp"><i>変わる時代に、</i><i>変わらない</i><i>「自分軸」を。</i></span>
         </h2>
         <p class="hmr-opening-lead">情報に急かされて答えを選ぶ前に、社会と自分を知り、自分の基準を言葉にする。HER MUSEは、そのための6ヶ月制オンラインカレッジです。</p>
-        <div class="hmr-opening-ribbon">変わる時代に、変わらない「自分軸」を。</div>
+        <div class="hmr-opening-ribbon">変わりたい。でも、何を選べばいいかまだ分からない。</div>
         <div class="hmr-opening-actions">
           <a class="hmr-cta-button" href="${LINE_CTA_URL}"><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
           <small>やりたいことが決まっていなくても大丈夫です</small>
