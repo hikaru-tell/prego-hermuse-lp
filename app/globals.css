@@ -677,6 +677,207 @@ button { font: inherit; }
   #her-muse-reference-body-v2 .hmr-page.hmr-page-sp { width: 100%; }
 }
 
+/* Header and lead-generation CTAs */
+#her-muse-reference-body-v2 .hmr-site-header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  display: grid;
+  min-height: 68px;
+  padding: 0 clamp(20px, 4vw, 64px);
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  gap: clamp(24px, 4vw, 64px);
+  border-bottom: 1px solid rgba(39, 52, 58, .12);
+  background: rgba(246, 242, 237, .94);
+  backdrop-filter: blur(14px);
+}
+#her-muse-reference-body-v2 .hmr-header-logo {
+  color: var(--hmr-ink);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+#her-muse-reference-body-v2 .hmr-header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(16px, 2vw, 30px);
+}
+#her-muse-reference-body-v2 .hmr-header-nav a {
+  color: rgba(39, 52, 58, .74);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .2s ease;
+}
+#her-muse-reference-body-v2 .hmr-header-nav a:hover {
+  color: var(--hmr-red);
+}
+#her-muse-reference-body-v2 .hmr-header-cta,
+#her-muse-reference-body-v2 .hmr-cta-button {
+  display: inline-flex;
+  min-height: 50px;
+  padding: 0 18px 0 22px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  border: 1px solid #315f4a;
+  color: #fff;
+  background: #315f4a;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .2s ease, background-color .2s ease, transform .2s ease;
+}
+#her-muse-reference-body-v2 .hmr-header-cta {
+  min-height: 42px;
+  padding-inline: 18px 14px;
+}
+#her-muse-reference-body-v2 .hmr-header-cta b,
+#her-muse-reference-body-v2 .hmr-cta-button b {
+  display: grid;
+  width: 24px;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  color: #315f4a;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+}
+#her-muse-reference-body-v2 .hmr-header-cta:hover,
+#her-muse-reference-body-v2 .hmr-cta-button:hover {
+  color: #315f4a;
+  background: #fff;
+  transform: translateY(-2px);
+}
+#her-muse-reference-body-v2 .hmr-opening-actions {
+  display: grid;
+  width: min(310px, 100%);
+  margin-top: 22px;
+  gap: 9px;
+}
+#her-muse-reference-body-v2 .hmr-opening-actions small {
+  color: rgba(39, 52, 58, .64);
+  font-size: 10px;
+  text-align: center;
+}
+#her-muse-reference-body-v2 .hmr-line-cta {
+  display: grid;
+  padding: clamp(64px, 8vw, 112px) 7%;
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(42px, 7vw, 100px);
+  color: #fff;
+  background: #315f4a;
+}
+#her-muse-reference-body-v2 .hmr-line-cta-copy > p {
+  margin: 0 0 26px;
+  color: var(--hmr-lime);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .18em;
+}
+#her-muse-reference-body-v2 .hmr-line-cta-copy h2 {
+  margin: 0;
+  font-size: clamp(28px, 3.6vw, 50px);
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: -.04em;
+}
+#her-muse-reference-body-v2 .hmr-line-cta-copy h2 i {
+  display: block;
+  font-style: normal;
+  white-space: nowrap;
+}
+#her-muse-reference-body-v2 .hmr-line-cta-copy small {
+  display: block;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, .7);
+  font-size: 11px;
+}
+#her-muse-reference-body-v2 .hmr-cta-button--light {
+  min-width: min(320px, 100%);
+  border-color: #fff;
+  color: #315f4a;
+  background: #fff;
+}
+#her-muse-reference-body-v2 .hmr-cta-button--light b {
+  color: #fff;
+  background: #315f4a;
+}
+#her-muse-reference-body-v2 .hmr-cta-button--light:hover {
+  color: #fff;
+  background: transparent;
+}
+#her-muse-reference-body-v2 .hmr-cta-button--price {
+  width: 100%;
+  margin-top: 26px;
+  border-color: var(--hmr-lime);
+  color: var(--hmr-ink);
+  background: var(--hmr-lime);
+}
+#her-muse-reference-body-v2 .hmr-cta-button--price b {
+  color: #315f4a;
+}
+#her-muse-reference-body-v2 .hmr-cta-button--price:hover {
+  border-color: #fff;
+}
+#her-muse-reference-body-v2 section[id] {
+  scroll-margin-top: 76px;
+}
+
+@media (max-width: 767px) {
+  #her-muse-reference-body-v2 .hmr-site-header {
+    min-height: 58px;
+    padding-inline: 16px;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+  }
+  #her-muse-reference-body-v2 .hmr-header-logo {
+    font-size: 14px;
+  }
+  #her-muse-reference-body-v2 .hmr-header-nav {
+    display: none;
+  }
+  #her-muse-reference-body-v2 .hmr-header-cta {
+    min-height: 38px;
+    padding-inline: 13px 9px;
+    gap: 10px;
+    font-size: 10px;
+  }
+  #her-muse-reference-body-v2 .hmr-header-cta b {
+    width: 21px;
+    font-size: 11px;
+  }
+  #her-muse-reference-body-v2 .hmr-opening-actions {
+    width: 100%;
+    margin-top: 18px;
+  }
+  #her-muse-reference-body-v2 .hmr-cta-button {
+    width: 100%;
+  }
+  #her-muse-reference-body-v2 .hmr-line-cta {
+    padding: 58px 20px;
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  #her-muse-reference-body-v2 .hmr-line-cta-copy h2 {
+    font-size: 27px;
+  }
+  #her-muse-reference-body-v2 .hmr-line-cta-copy small {
+    max-width: 280px;
+    line-height: 1.8;
+  }
+}
+
 /* Refined heading scale */
 #her-muse-reference-body-v2 .hmr-opening h2 {
   font-size: clamp(29px, 3.8vw, 56px);

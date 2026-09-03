@@ -1,15 +1,30 @@
 const pageMarkup = String.raw`
 <div id="her-muse-reference-body-v2">
-<main class="hmr-page" data-hmr-page aria-label="HER MUSE FV以降のデザイン再提案">
-    <section class="hmr-opening">
+  <header class="hmr-site-header">
+    <a class="hmr-header-logo" href="#top" aria-label="HER MUSE トップへ">HER MUSE</a>
+    <nav class="hmr-header-nav" aria-label="ページ内ナビゲーション">
+      <a href="#program">学びの流れ</a>
+      <a href="#features">特徴</a>
+      <a href="#support">サポート</a>
+      <a href="#price">料金</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="hmr-header-cta" href="#line-entry"><span>LINEで無料相談</span><b aria-hidden="true">→</b></a>
+  </header>
+<main id="top" class="hmr-page" data-hmr-page aria-label="HER MUSE 女性のための6ヶ月制オンラインカレッジ">
+    <section class="hmr-opening" aria-labelledby="opening-title">
       <div class="hmr-opening-copy">
         <p class="hmr-kicker">FOR WOMEN WHO WANT TO CHOOSE THEIR OWN WAY</p>
-        <h2>
+        <h2 id="opening-title">
           <span class="hmr-copy-pc"><i>変わりたい。</i><i>でも、何を選ぶか</i><i>まだ分からない。</i></span>
           <span class="hmr-copy-sp"><i>変わりたい。</i><i>でも、何を選べば</i><i>いいか、まだ</i><i>分からない。</i></span>
         </h2>
         <p class="hmr-opening-lead">HER MUSEは、やりたいことが決まっている人だけのスクールではありません。</p>
         <div class="hmr-opening-ribbon">答えを急ぐ前に、まず自分を知る。</div>
+        <div class="hmr-opening-actions">
+          <a class="hmr-cta-button" href="#line-entry"><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
+          <small>迷っている段階でも大丈夫です</small>
+        </div>
       </div>
       <div class="hmr-opening-photo" role="img" aria-label="チューリップを抱える女性の写真"></div>
       <div class="hmr-opening-stat">
@@ -51,7 +66,7 @@ const pageMarkup = String.raw`
       <p class="hmr-after-note"><span>スキルを増やすだけではなく、</span><strong>自分で次を選べる状態</strong><span>を目指します。</span></p>
     </section>
 
-    <section class="hmr-program">
+    <section id="program" class="hmr-program">
       <div class="hmr-program-backdrop"></div>
       <div class="hmr-program-copy">
         <p class="hmr-section-no">03 / THE HER MUSE PROGRAM</p>
@@ -69,7 +84,7 @@ const pageMarkup = String.raw`
       </div>
     </section>
 
-    <section class="hmr-benefits">
+    <section id="features" class="hmr-benefits">
       <div class="hmr-benefits-heading">
         <p class="hmr-section-no">DESIGNED FOR YOUR LIFE</p>
         <h2>
@@ -111,6 +126,15 @@ const pageMarkup = String.raw`
       </div>
     </section>
 
+    <section id="line-entry" class="hmr-line-cta" aria-label="LINE無料相談のご案内">
+      <div class="hmr-line-cta-copy">
+        <p>FREE GUIDANCE VIA LINE</p>
+        <h2><i>迷っている段階でも、</i><i>まずは話してみませんか。</i></h2>
+        <small>受講を決める前のご相談だけでも大丈夫です。</small>
+      </div>
+      <a class="hmr-cta-button hmr-cta-button--light" href="#line-entry" data-line-url="pending"><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
+    </section>
+
     <section class="hmr-learning">
       <div class="hmr-learning-illustration" role="img" aria-label="腕を伸ばす女性の線画"></div>
       <div class="hmr-learning-copy">
@@ -128,7 +152,7 @@ const pageMarkup = String.raw`
       </div>
     </section>
 
-    <section class="hmr-support">
+    <section id="support" class="hmr-support">
       <div class="hmr-support-title">
         <p class="hmr-section-no">05 / SUPPORT & PEOPLE</p>
         <h2>
@@ -166,7 +190,7 @@ const pageMarkup = String.raw`
       </div>
     </section>
 
-    <section class="hmr-price">
+    <section id="price" class="hmr-price">
       <div class="hmr-price-intro">
         <p class="hmr-section-no">07 / PLAN & PRICE</p>
         <h2><i>6ヶ月の学びを、</i><i>無理なく続ける。</i></h2>
@@ -177,10 +201,11 @@ const pageMarkup = String.raw`
         <p><span>本科カリキュラム</span><strong>9,800<small>円 / 月</small></strong></p>
         <p><span>6ヶ月総額目安</span><strong>108,600<small>円</small></strong></p>
         <small>入会金49,800円＋月額9,800円×6ヶ月</small>
+        <a class="hmr-cta-button hmr-cta-button--price" href="#line-entry"><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
       </div>
     </section>
 
-    <section class="hmr-faq">
+    <section id="faq" class="hmr-faq">
       <div class="hmr-faq-heading"><p class="hmr-section-no">08 / FAQ</p><h2><i>よくある質問</i></h2></div>
       <div class="hmr-faq-list">
         <p><span>Q01</span>やりたいことが決まっていなくても参加できますか？<b>＋</b></p>
