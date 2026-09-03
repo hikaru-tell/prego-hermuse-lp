@@ -1,7 +1,9 @@
+const LINE_CTA_URL = "#line-entry";
+
 const pageMarkup = String.raw`
 <div id="her-muse-reference-body-v2">
   <header class="hmr-site-header">
-    <a class="hmr-header-logo" href="#top" aria-label="HER MUSE トップへ">HER MUSE</a>
+    <a class="hmr-header-logo" href="#top" aria-label="HER MUSE トップへ"><img src="/her-muse-logo.svg" alt="HER MUSE" width="88" height="63"></a>
     <nav class="hmr-header-nav" aria-label="ページ内ナビゲーション">
       <a href="#program">学びの流れ</a>
       <a href="#features">特徴</a>
@@ -9,7 +11,7 @@ const pageMarkup = String.raw`
       <a href="#price">料金</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="hmr-header-cta" href="#line-entry"><span>LINEで無料相談</span><b aria-hidden="true">→</b></a>
+    <a class="hmr-header-cta" href="${LINE_CTA_URL}"><span>LINEで無料相談</span><b aria-hidden="true">→</b></a>
   </header>
 <main id="top" class="hmr-page" data-hmr-page aria-label="HER MUSE 女性のための6ヶ月制オンラインカレッジ">
     <section class="hmr-opening" aria-labelledby="opening-title">
@@ -19,11 +21,11 @@ const pageMarkup = String.raw`
           <span class="hmr-copy-pc"><i>変わりたい。</i><i>でも、何を選ぶか</i><i>まだ分からない。</i></span>
           <span class="hmr-copy-sp"><i>変わりたい。</i><i>でも、何を選べば</i><i>いいか、まだ</i><i>分からない。</i></span>
         </h2>
-        <p class="hmr-opening-lead">HER MUSEは、やりたいことが決まっている人だけのスクールではありません。</p>
-        <div class="hmr-opening-ribbon">答えを急ぐ前に、まず自分を知る。</div>
+        <p class="hmr-opening-lead">情報に急かされて答えを選ぶ前に、社会と自分を知り、自分の基準を言葉にする。HER MUSEは、そのための6ヶ月制オンラインカレッジです。</p>
+        <div class="hmr-opening-ribbon">変わる時代に、変わらない「自分軸」を。</div>
         <div class="hmr-opening-actions">
-          <a class="hmr-cta-button" href="#line-entry"><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
-          <small>迷っている段階でも大丈夫です</small>
+          <a class="hmr-cta-button" href="${LINE_CTA_URL}"><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
+          <small>やりたいことが決まっていなくても大丈夫です</small>
         </div>
       </div>
       <div class="hmr-opening-photo" role="img" aria-label="チューリップを抱える女性の写真"></div>
@@ -33,7 +35,7 @@ const pageMarkup = String.raw`
           <span class="hmr-copy-pc"><i>「いったい自分は</i><i>なんのために働いているのだろう」</i><i>と感じたことがある人</i></span>
           <span class="hmr-copy-sp"><i>「いったい自分は</i><i>なんのために</i><i>働いているのだろう」</i><i>と感じたことがある人</i></span>
         </p>
-        <small>出典表記をここに配置</small>
+        <small>出典：doda「なんのために働くのか？」15,000人調査（2024年）</small>
       </div>
     </section>
 
@@ -45,25 +47,25 @@ const pageMarkup = String.raw`
         <span class="hmr-copy-sp"><i>選択肢を増やしても、</i><i>自分に合う答えは</i><i>見つからない。</i></span>
       </p>
       <div class="hmr-problem-scenes">
-        <p><span><i>今の仕事を</i><i>続ける</i></span><strong>未来が<em>見えない</em></strong></p>
-        <p><span><i>SNSを見るほど</i></span><strong><em>焦って</em>しまう</strong></p>
+        <p><span><i>今の仕事を</i><i>続ける先の</i></span><strong>未来を<em>描けない</em></strong></p>
+        <p><span><i>誰かの選択を</i><i>見るほど</i></span><strong><em>焦って</em>しまう</strong></p>
         <p><span><i>強みや、</i><i>やりたいことを</i></span><strong>言葉に<em>できない</em></strong></p>
-        <p><span><i>何を学べば</i><i>いいか</i></span><strong><em>分からない</em></strong></p>
+        <p><span><i>何から始めるか</i></span><strong><em>整理できない</em></strong></p>
       </div>
     </section>
 
     <section class="hmr-after">
       <p class="hmr-section-no">02 / AFTER 6 MONTHS</p>
       <h2>
-        <span class="hmr-copy-pc"><i>6ヶ月後、</i><i>「正解を探す」から</i><i>「自分で選ぶ」へ。</i></span>
-        <span class="hmr-copy-sp"><i>6ヶ月後、</i><i>「正解を探す」から</i><i>「自分で選ぶ」へ。</i></span>
+        <span class="hmr-copy-pc"><i>6ヶ月後、</i><i>「正解を探す」から</i><i>「自分の軸で選ぶ」へ。</i></span>
+        <span class="hmr-copy-sp"><i>6ヶ月後、</i><i>「正解を探す」から</i><i>「自分の軸で選ぶ」へ。</i></span>
       </h2>
       <div class="hmr-after-stage">
-        <article><div class="hmr-after-meta"><b>01</b><small>VALUE</small></div><strong><i>自分が大切にしたい</i><i>基準を話せる</i></strong><div class="hmr-after-card-photo hmr-after-card-photo--01" role="img" aria-label="ノートに考えを書き出す女性"></div></article>
+        <article><div class="hmr-after-meta"><b>01</b><small>VALUE</small></div><strong><i>自分が大切にしたい</i><i>基準を言葉にできる</i></strong><div class="hmr-after-card-photo hmr-after-card-photo--01" role="img" aria-label="ノートに考えを書き出す女性"></div></article>
         <article><div class="hmr-after-meta"><b>02</b><small>ACTION</small></div><strong><i>次に試す行動を</i><i>ひとつ決められる</i></strong><div class="hmr-after-card-photo hmr-after-card-photo--02" role="img" aria-label="パソコンで仕事をする女性"></div></article>
-        <article><div class="hmr-after-meta"><b>03</b><small>MESSAGE</small></div><strong><i>経験や強みを</i><i>届く形に変えられる</i></strong><div class="hmr-after-card-photo hmr-after-card-photo--03" role="img" aria-label="対話しながら自分の言葉を見つける女性"></div></article>
+        <article><div class="hmr-after-meta"><b>03</b><small>MESSAGE</small></div><strong><i>経験や強みを</i><i>届く価値に変えられる</i></strong><div class="hmr-after-card-photo hmr-after-card-photo--03" role="img" aria-label="対話しながら自分の言葉を見つける女性"></div></article>
       </div>
-      <p class="hmr-after-note"><span>スキルを増やすだけではなく、</span><strong>自分で次を選べる状態</strong><span>を目指します。</span></p>
+      <p class="hmr-after-note"><span>「もう十分」を土台に、</span><strong>「もっと良くなれる」自分へ。</strong></p>
     </section>
 
     <section id="program" class="hmr-program">
@@ -74,13 +76,13 @@ const pageMarkup = String.raw`
           <span class="hmr-copy-pc"><i>社会と自分を知り、</i><i>言葉にして、形にする。</i></span>
           <span class="hmr-copy-sp"><i>社会と自分を知り、</i><i>言葉にして、</i><i>形にする。</i></span>
         </h2>
-        <p>6ヶ月を4つのステップに分け、自分の基準から次の一歩までつなげます。</p>
+        <p>外から内へ、そして内から外へ。4つのステップで、自分の問いを具体的な一歩へつなげます。</p>
       </div>
       <div class="hmr-program-route">
-        <article><b>01</b><small>MONTH 1–2</small><strong>社会を知る</strong><p>変化と選択肢を知る</p></article>
-        <article><b>02</b><small>MONTH 2–3</small><strong>自分を知る</strong><p>経験と感性を整理する</p></article>
-        <article><b>03</b><small>MONTH 4–5</small><strong>伝える</strong><p>価値を言葉へ変える</p></article>
-        <article><b>04</b><small>MONTH 5–6</small><strong>形にする</strong><p>具体的な選択につなげる</p></article>
+        <article><b>01</b><small>MONTH 1–2</small><strong>社会を知る</strong><p>働く意味と時代の変化を知る</p></article>
+        <article><b>02</b><small>MONTH 2–3</small><strong>自分を知る</strong><p>感性と心のウェルネスを整える</p></article>
+        <article><b>03</b><small>MONTH 4–5</small><strong>伝える</strong><p>経験を届く言葉へ変える</p></article>
+        <article><b>04</b><small>MONTH 5–6</small><strong>形にする</strong><p>自分の看板で生きる準備をする</p></article>
       </div>
     </section>
 
@@ -129,10 +131,13 @@ const pageMarkup = String.raw`
     <section id="line-entry" class="hmr-line-cta" aria-label="LINE無料相談のご案内">
       <div class="hmr-line-cta-copy">
         <p>FREE GUIDANCE VIA LINE</p>
-        <h2><i>迷っている段階でも、</i><i>まずは話してみませんか。</i></h2>
-        <small>受講を決める前のご相談だけでも大丈夫です。</small>
+        <h2>
+          <span class="hmr-copy-pc"><i>答えは、まだ決まっていなくて大丈夫。</i><i>まずは今の気持ちを整理しませんか。</i></span>
+          <span class="hmr-copy-sp"><i>答えは、まだ</i><i>決まっていなくて大丈夫。</i><i>まずは今の気持ちを</i><i>整理しませんか。</i></span>
+        </h2>
+        <small>答えを渡すのではなく、あなたの中にある言葉を一緒に見つけます。</small>
       </div>
-      <a class="hmr-cta-button hmr-cta-button--light" href="#line-entry" data-line-url="pending"><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
+      <a class="hmr-cta-button hmr-cta-button--light" href="${LINE_CTA_URL}" data-line-url="pending"><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
     </section>
 
     <section class="hmr-learning">
@@ -143,11 +148,11 @@ const pageMarkup = String.raw`
           <span class="hmr-copy-pc"><i>仕事がある毎日でも、</i><i>学びを生活から</i><i>切り離さない。</i></span>
           <span class="hmr-copy-sp"><i>仕事がある毎日でも、</i><i>学びを生活から</i><i>切り離さない。</i></span>
         </h2>
-        <p>長い講義を受け続けるのではなく、短く学び、ワークで整理し、対話しながら試します。</p>
+        <p>長い講義を受け続けるのではなく、短く学び、自分の言葉で整理し、対話の中で小さく試します。</p>
       </div>
       <div class="hmr-learning-bands">
-        <article><span>01</span><strong>1コマ 約30分</strong><p>考える材料を短いレッスンで受け取る</p></article>
-        <article><span>02</span><strong>自分専用のワーク</strong><p>聞いて終わらず、自分の言葉に置き換える</p></article>
+        <article><span>01</span><strong>1コマ 約30分</strong><p>社会を知り、自分の問いを立てる</p></article>
+        <article><span>02</span><strong>自分専用のワーク</strong><p>経験と感性を自分の言葉にする</p></article>
         <article><span>03</span><strong>対話とフィードバック</strong><p>気づきを小さな行動として試す</p></article>
       </div>
     </section>
@@ -165,7 +170,7 @@ const pageMarkup = String.raw`
         <div class="hmr-support-caption">
           <span>MENTORING SESSION</span>
           <strong>対話から、自分の言葉を見つける。</strong>
-          <small>答えを急がず、考えを言葉にしていく時間</small>
+          <small>答えを急がず、あなたの中にある言葉を一緒に見つける時間</small>
         </div>
       </div>
       <div class="hmr-support-proof">
@@ -201,7 +206,7 @@ const pageMarkup = String.raw`
         <p><span>本科カリキュラム</span><strong>9,800<small>円 / 月</small></strong></p>
         <p><span>6ヶ月総額目安</span><strong>108,600<small>円</small></strong></p>
         <small>入会金49,800円＋月額9,800円×6ヶ月</small>
-        <a class="hmr-cta-button hmr-cta-button--price" href="#line-entry"><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
+        <a class="hmr-cta-button hmr-cta-button--price" href="${LINE_CTA_URL}"><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
       </div>
     </section>
 

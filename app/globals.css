@@ -2,6 +2,7 @@
   --hmr-bg: #f6f2ed;
   --hmr-ink: #27343a;
   --hmr-red: #aa5362;
+  --hmr-cta: #347454;
   --hmr-blue-dark: #526a75;
   --hmr-blue: #8199a2;
   --hmr-lime: #d5dd91;
@@ -693,12 +694,18 @@ button { font: inherit; }
   backdrop-filter: blur(14px);
 }
 #her-muse-reference-body-v2 .hmr-header-logo {
+  display: block;
   color: var(--hmr-ink);
   font-size: 17px;
   font-weight: 600;
   letter-spacing: .14em;
   text-decoration: none;
   white-space: nowrap;
+}
+#her-muse-reference-body-v2 .hmr-header-logo img {
+  display: block;
+  width: 62px;
+  height: auto;
 }
 #her-muse-reference-body-v2 .hmr-header-nav {
   display: flex;
@@ -721,24 +728,26 @@ button { font: inherit; }
 #her-muse-reference-body-v2 .hmr-header-cta,
 #her-muse-reference-body-v2 .hmr-cta-button {
   display: inline-flex;
-  min-height: 50px;
+  min-height: 54px;
   padding: 0 18px 0 22px;
   align-items: center;
   justify-content: space-between;
   gap: 22px;
-  border: 1px solid #315f4a;
+  border: 1px solid var(--hmr-cta);
   color: #fff;
-  background: #315f4a;
+  background: var(--hmr-cta);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: .05em;
   text-decoration: none;
   white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(39, 97, 70, .2);
   transition: color .2s ease, background-color .2s ease, transform .2s ease;
 }
 #her-muse-reference-body-v2 .hmr-header-cta {
   min-height: 42px;
   padding-inline: 18px 14px;
+  box-shadow: 0 6px 18px rgba(39, 97, 70, .18);
 }
 #her-muse-reference-body-v2 .hmr-header-cta b,
 #her-muse-reference-body-v2 .hmr-cta-button b {
@@ -747,14 +756,14 @@ button { font: inherit; }
   aspect-ratio: 1;
   place-items: center;
   border-radius: 50%;
-  color: #315f4a;
+  color: var(--hmr-cta);
   background: #fff;
   font-size: 13px;
   font-weight: 500;
 }
 #her-muse-reference-body-v2 .hmr-header-cta:hover,
 #her-muse-reference-body-v2 .hmr-cta-button:hover {
-  color: #315f4a;
+  color: var(--hmr-cta);
   background: #fff;
   transform: translateY(-2px);
 }
@@ -776,7 +785,7 @@ button { font: inherit; }
   grid-template-columns: minmax(0, 1fr) auto;
   gap: clamp(42px, 7vw, 100px);
   color: #fff;
-  background: #315f4a;
+  background: var(--hmr-cta);
 }
 #her-muse-reference-body-v2 .hmr-line-cta-copy > p {
   margin: 0 0 26px;
@@ -806,12 +815,12 @@ button { font: inherit; }
 #her-muse-reference-body-v2 .hmr-cta-button--light {
   min-width: min(320px, 100%);
   border-color: #fff;
-  color: #315f4a;
+  color: var(--hmr-cta);
   background: #fff;
 }
 #her-muse-reference-body-v2 .hmr-cta-button--light b {
   color: #fff;
-  background: #315f4a;
+  background: var(--hmr-cta);
 }
 #her-muse-reference-body-v2 .hmr-cta-button--light:hover {
   color: #fff;
@@ -825,7 +834,7 @@ button { font: inherit; }
   background: var(--hmr-lime);
 }
 #her-muse-reference-body-v2 .hmr-cta-button--price b {
-  color: #315f4a;
+  color: var(--hmr-cta);
 }
 #her-muse-reference-body-v2 .hmr-cta-button--price:hover {
   border-color: #fff;
@@ -843,6 +852,9 @@ button { font: inherit; }
   }
   #her-muse-reference-body-v2 .hmr-header-logo {
     font-size: 14px;
+  }
+  #her-muse-reference-body-v2 .hmr-header-logo img {
+    width: 48px;
   }
   #her-muse-reference-body-v2 .hmr-header-nav {
     display: none;
