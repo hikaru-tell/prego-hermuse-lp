@@ -1,20 +1,35 @@
-import localFont from "next/font/local";
+import {
+  Anton,
+  DM_Sans,
+  Playfair_Display,
+  Shippori_Mincho,
+} from "next/font/google";
 
-export const zenKaku = localFont({
-  src: [
-    { path: "../fonts/zenkaku-400.woff2", weight: "400", style: "normal" },
-    { path: "../fonts/zenkaku-500.woff2", weight: "500", style: "normal" },
-    { path: "../fonts/zenkaku-700.woff2", weight: "700", style: "normal" },
-  ],
-  variable: "--font-sans-local",
+export const anton = Anton({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-anton",
   display: "swap",
 });
 
-export const notoSerif = localFont({
-  src: [
-    { path: "../fonts/serif-500.woff2", weight: "500", style: "normal" },
-    { path: "../fonts/serif-600.woff2", weight: "600", style: "normal" },
-  ],
-  variable: "--font-serif-local",
+export const dmSans = DM_Sans({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
+
+export const playfairDisplay = Playfair_Display({
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+export const shipporiMincho = Shippori_Mincho({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-shippori",
   display: "swap",
 });

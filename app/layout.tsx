@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { MotionEnhancer } from "@/components/motion-enhancer";
-import { zenKaku, notoSerif } from "./fonts";
+import { anton, dmSans, playfairDisplay, shipporiMincho } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -12,12 +12,15 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f3efe8",
+  themeColor: "#f8f5ef",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ja" className={`${zenKaku.variable} ${notoSerif.variable}`}>
+    <html
+      lang="ja"
+      className={`${anton.variable} ${dmSans.variable} ${playfairDisplay.variable} ${shipporiMincho.variable}`}
+    >
       <body>
         <MotionEnhancer />
         {children}
