@@ -1,3 +1,5 @@
+import VoiceCarouselEnhancer from "./voice-carousel";
+
 const lineCtaUrl = process.env.NEXT_PUBLIC_LINE_CTA_URL?.trim();
 const LINE_CTA_ATTRIBUTES = lineCtaUrl
   ? `href="${lineCtaUrl.replaceAll('"', "&quot;")}"`
@@ -198,10 +200,15 @@ const pageMarkup = String.raw`
         </h2>
         <p class="hmr-voice-swipe" aria-hidden="true">SWIPE <span>→</span></p>
       </div>
-      <div class="hmr-voice-stage" role="region" aria-label="受講生ストーリー。横方向にスクロールできます" tabindex="0">
-        <article class="hmr-voice-side"><div><span>VOICE 01</span></div><small>会社員・30代</small></article>
-        <article class="hmr-voice-main"><div><span>VOICE 02</span></div><small>会社員・20代</small><h3><i>「得意なこと」を、初めて</i><i>自分の言葉で</i><i>話せるようになった。</i></h3><p>受講前の迷い、途中で気づいたこと、6ヶ月後に選んだ一歩を具体的に掲載します。</p></article>
-        <article class="hmr-voice-side"><div><span>VOICE 03</span></div><small>フリーランス・30代</small></article>
+      <div class="hmr-voice-stage" data-voice-carousel role="region" aria-label="受講生ストーリー。横方向にスクロールするか、カードを選んで中央に表示できます" tabindex="0">
+        <article class="hmr-voice-side hmr-voice--01" data-voice-card role="button" tabindex="0" aria-label="VOICE 01を中央に表示"><div><span>VOICE 01</span></div><small>会社員・30代</small></article>
+        <article class="hmr-voice-main hmr-voice--02" data-voice-card role="button" tabindex="0" aria-label="VOICE 02を中央に表示"><div><span>VOICE 02</span></div><small>会社員・20代</small><h3><i>「得意なこと」を、初めて</i><i>自分の言葉で</i><i>話せるようになった。</i></h3><p>受講前の迷い、途中で気づいたこと、6ヶ月後に選んだ一歩を具体的に掲載します。</p></article>
+        <article class="hmr-voice-side hmr-voice--03" data-voice-card role="button" tabindex="0" aria-label="VOICE 03を中央に表示"><div><span>VOICE 03</span></div><small>フリーランス・30代</small></article>
+      </div>
+      <div class="hmr-voice-controls" aria-label="受講生ストーリーの操作">
+        <button type="button" data-voice-prev aria-label="前のストーリーを表示">←</button>
+        <p aria-live="polite"><b data-voice-current>02</b><span>/ 03</span></p>
+        <button type="button" data-voice-next aria-label="次のストーリーを表示">→</button>
       </div>
     </section>
 
@@ -250,5 +257,10 @@ const pageMarkup = String.raw`
 `;
 
 export default function Home() {
-  return <div dangerouslySetInnerHTML={{ __html: pageMarkup }} />;
+  return (
+    <>
+      <div dangerouslySetInnerHTML={{ __html: pageMarkup }} />
+      <VoiceCarouselEnhancer />
+    </>
+  );
 }

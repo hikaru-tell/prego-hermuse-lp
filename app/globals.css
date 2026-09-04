@@ -1634,3 +1634,110 @@ button { font: inherit; }
     line-height: 1.95;
   }
 }
+
+/* REAL STORIES: tap-to-center, swipeable looping carousel. */
+#her-muse-reference-body-v2 .hmr-voice-stage {
+  display: flex;
+  width: 100%;
+  margin-left: 0;
+  padding: 26px max(20px, calc((100% - min(640px, 64vw)) / 2)) 38px;
+  gap: clamp(14px, 2vw, 28px);
+  align-items: stretch;
+  overflow-x: auto;
+  scroll-snap-type: none;
+  scrollbar-width: none;
+  overscroll-behavior-inline: contain;
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
+}
+#her-muse-reference-body-v2 .hmr-voice-stage::-webkit-scrollbar { display: none; }
+#her-muse-reference-body-v2 .hmr-voice-stage article {
+  flex: 0 0 min(640px, 64vw);
+  min-height: 520px;
+  scroll-snap-align: center;
+  opacity: .46;
+  transform: scale(.92);
+  transform-origin: center;
+  cursor: pointer;
+  transition: opacity .32s ease, transform .32s ease, box-shadow .32s ease;
+}
+#her-muse-reference-body-v2 .hmr-voice-stage article.is-active {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 14px 14px 0 rgba(39,52,58,.14);
+}
+#her-muse-reference-body-v2 .hmr-voice-stage article:focus-visible {
+  outline: 2px solid var(--hmr-ink);
+  outline-offset: 4px;
+}
+#her-muse-reference-body-v2 .hmr-voice-stage .hmr-voice--01 > div {
+  background: linear-gradient(rgba(39,52,58,.04),rgba(39,52,58,.18)), var(--hmr-photo-voice-writing) center / cover no-repeat;
+}
+#her-muse-reference-body-v2 .hmr-voice-stage .hmr-voice--02 > div {
+  background: linear-gradient(rgba(39,52,58,.02),rgba(39,52,58,.16)), var(--hmr-photo-voice-mentor) center / cover no-repeat;
+}
+#her-muse-reference-body-v2 .hmr-voice-stage .hmr-voice--03 > div {
+  background: linear-gradient(rgba(39,52,58,.03),rgba(39,52,58,.2)), var(--hmr-photo-voice-laptop) center / cover no-repeat;
+}
+#her-muse-reference-body-v2 .hmr-voice-controls {
+  display: flex;
+  margin-top: 12px;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+#her-muse-reference-body-v2 .hmr-voice-controls button {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgba(23,21,18,.45);
+  border-radius: 50%;
+  color: var(--hmr-ink);
+  background: transparent;
+  font-size: 17px;
+  cursor: pointer;
+  transition: color .2s ease, background-color .2s ease, transform .2s ease;
+}
+#her-muse-reference-body-v2 .hmr-voice-controls button:hover {
+  color: var(--hmr-bg);
+  background: var(--hmr-ink);
+  transform: translateY(-2px);
+}
+#her-muse-reference-body-v2 .hmr-voice-controls button:focus-visible {
+  outline: 2px solid var(--hmr-red);
+  outline-offset: 3px;
+}
+#her-muse-reference-body-v2 .hmr-voice-controls p {
+  display: flex;
+  margin: 0;
+  align-items: baseline;
+  gap: 7px;
+  font-family: var(--font-dm-sans), sans-serif;
+}
+#her-muse-reference-body-v2 .hmr-voice-controls b { font-size: 17px; font-weight: 600; }
+#her-muse-reference-body-v2 .hmr-voice-controls span { color: rgba(23,21,18,.52); font-size: 10px; }
+
+@media (max-width: 767px) {
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-voice-stage {
+    width: 100%;
+    margin-left: 0;
+    padding: 14px 9vw 18px;
+    gap: 12px;
+    scroll-padding-inline: 0;
+    scroll-snap-type: none;
+  }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-voice-stage article {
+    flex-basis: 82vw;
+    min-height: 500px;
+    scroll-snap-align: center;
+  }
+  #her-muse-reference-body-v2 .hmr-voice-controls { margin-top: 8px; }
+  #her-muse-reference-body-v2 .hmr-voice-controls button { width: 42px; height: 42px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #her-muse-reference-body-v2 .hmr-voice-stage article,
+  #her-muse-reference-body-v2 .hmr-voice-controls button { transition: none; }
+}
