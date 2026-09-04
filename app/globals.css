@@ -1497,3 +1497,140 @@ button { font: inherit; }
   }
   #her-muse-reference-body-v2 .hmr-line-cta .hmr-cta-button { width: min(320px, 100%); }
 }
+
+/* FAQ answers and mobile density pass. */
+#her-muse-reference-body-v2 .hmr-voice-swipe { display: none; }
+#her-muse-reference-body-v2 .hmr-faq-list details {
+  border-bottom: 1px solid rgba(23, 21, 18, .22);
+  transition: background-color .2s ease;
+}
+#her-muse-reference-body-v2 .hmr-faq-list details[open] {
+  background: rgba(201, 220, 240, .28);
+}
+#her-muse-reference-body-v2 .hmr-faq-list summary {
+  display: grid;
+  min-height: 104px;
+  padding: 22px 0;
+  align-items: center;
+  grid-template-columns: 50px minmax(0, 1fr) 24px;
+  gap: 0;
+  cursor: pointer;
+  list-style: none;
+}
+#her-muse-reference-body-v2 .hmr-faq-list summary::-webkit-details-marker { display: none; }
+#her-muse-reference-body-v2 .hmr-faq-list summary span {
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+}
+#her-muse-reference-body-v2 .hmr-faq-list summary strong {
+  min-width: 0;
+  font-size: clamp(12px, 1.15vw, 16px);
+  font-weight: 500;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+#her-muse-reference-body-v2 .hmr-faq-list summary b {
+  justify-self: end;
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform .2s ease;
+}
+#her-muse-reference-body-v2 .hmr-faq-list details[open] summary b { transform: rotate(45deg); }
+#her-muse-reference-body-v2 .hmr-faq-list details > p,
+#her-muse-reference-body-v2 .hmr-faq-list details > p:hover {
+  display: block;
+  min-height: 0;
+  margin: 0;
+  padding: 0 50px 30px;
+  border: 0;
+  background: transparent;
+  font-size: 13px;
+  line-height: 2;
+}
+#her-muse-reference-body-v2 a[aria-disabled="true"] {
+  cursor: default;
+}
+
+@media (max-width: 767px) {
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-problem,
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-after,
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-program,
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-support,
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-price,
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-faq {
+    padding: 48px 20px;
+  }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-benefits { padding: 48px 20px 54px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-learning { padding-bottom: 360px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-learning-illustration { min-height: 440px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-learning-copy { padding: 48px 20px 32px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-learning-bands article { min-height: 108px; padding-block: 18px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-voices { padding: 48px 0 52px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-after h2 { margin: 34px 0 40px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-after-stage article {
+    width: min(88%, 340px);
+    aspect-ratio: .92 / 1;
+    padding: 20px;
+  }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-after-stage strong {
+    margin: 30px 0 16px;
+  }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-after-card-photo {
+    min-height: 0;
+    margin-top: auto;
+    flex-basis: 43%;
+  }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-program-copy h2 { margin-top: 32px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-program-route { margin-top: 40px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-benefits-heading h2 { margin: 30px 0 44px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-support-title { gap: 28px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-support-visual { margin-top: 40px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-support-visual,
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-support-photo { min-height: 540px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-support-proof article { min-height: 160px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-support-proof article:last-child { min-height: 130px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-price,
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-faq { gap: 40px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-voices-heading h2 { margin: 30px 0 20px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-voice-swipe {
+    display: flex;
+    margin: 0 0 28px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    color: var(--hmr-ink);
+    font-family: var(--font-dm-sans), sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .16em;
+  }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-voice-swipe span { font-size: 18px; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-voice-stage {
+    padding-bottom: 14px;
+    overscroll-behavior-inline: contain;
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
+  }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-voice-stage:focus-visible {
+    outline: 2px solid var(--hmr-ink);
+    outline-offset: -2px;
+  }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-faq-list summary {
+    min-height: 82px;
+    padding: 18px 0;
+    grid-template-columns: 36px minmax(0, 1fr) 22px;
+  }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-faq-list summary strong {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-faq-list details > p,
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-faq-list details > p:hover {
+    padding: 0 22px 24px 36px;
+    font-size: 12px;
+    line-height: 1.95;
+  }
+}

@@ -1,4 +1,7 @@
-const LINE_CTA_URL = "#line-entry";
+const lineCtaUrl = process.env.NEXT_PUBLIC_LINE_CTA_URL?.trim();
+const LINE_CTA_ATTRIBUTES = lineCtaUrl
+  ? `href="${lineCtaUrl.replaceAll('"', "&quot;")}"`
+  : `aria-disabled="true" data-line-url="pending"`;
 
 const pageMarkup = String.raw`
 <div id="her-muse-reference-body-v2">
@@ -11,9 +14,9 @@ const pageMarkup = String.raw`
       <a href="#price">料金</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="hmr-header-cta" href="${LINE_CTA_URL}"><span>LINEで無料相談</span><b aria-hidden="true">→</b></a>
+    <a class="hmr-header-cta" ${LINE_CTA_ATTRIBUTES}><span>LINEで無料相談</span><b aria-hidden="true">→</b></a>
   </header>
-  <a class="hmr-floating-cta" href="${LINE_CTA_URL}">
+  <a class="hmr-floating-cta" ${LINE_CTA_ATTRIBUTES}>
     <span><small>何から始めるか、一緒に整理する</small>LINEで無料相談</span><b aria-hidden="true">→</b>
   </a>
 <main id="top" class="hmr-page" data-hmr-page aria-label="HER MUSE 女性のための6ヶ月制オンラインカレッジ">
@@ -26,7 +29,7 @@ const pageMarkup = String.raw`
         </h2>
         <p class="hmr-opening-lead">社会と自分を知り、自分の軸を言葉にする6ヶ月。</p>
         <div class="hmr-opening-actions">
-          <a class="hmr-cta-button" href="${LINE_CTA_URL}"><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
+          <a class="hmr-cta-button" ${LINE_CTA_ATTRIBUTES}><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
           <small>やりたいことが決まっていなくても大丈夫</small>
         </div>
       </div>
@@ -143,7 +146,7 @@ const pageMarkup = String.raw`
         </h2>
         <small>答えを渡すのではなく、あなたの中にある言葉を一緒に見つけます。</small>
       </div>
-      <a class="hmr-cta-button hmr-cta-button--light" href="${LINE_CTA_URL}" data-line-url="pending"><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
+      <a class="hmr-cta-button hmr-cta-button--light" ${LINE_CTA_ATTRIBUTES}><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
     </section>
 
     <section class="hmr-learning">
@@ -193,8 +196,9 @@ const pageMarkup = String.raw`
           <span class="hmr-copy-pc"><i>派手な成功より、</i><i>選び方が変わった本当の話を。</i></span>
           <span class="hmr-copy-sp"><i>派手な成功より、</i><i>選び方が変わった</i><i>本当の話を。</i></span>
         </h2>
+        <p class="hmr-voice-swipe" aria-hidden="true">SWIPE <span>→</span></p>
       </div>
-      <div class="hmr-voice-stage">
+      <div class="hmr-voice-stage" role="region" aria-label="受講生ストーリー。横方向にスクロールできます" tabindex="0">
         <article class="hmr-voice-side"><div><span>VOICE 01</span></div><small>会社員・30代</small></article>
         <article class="hmr-voice-main"><div><span>VOICE 02</span></div><small>会社員・20代</small><h3><i>「得意なこと」を、初めて</i><i>自分の言葉で</i><i>話せるようになった。</i></h3><p>受講前の迷い、途中で気づいたこと、6ヶ月後に選んだ一歩を具体的に掲載します。</p></article>
         <article class="hmr-voice-side"><div><span>VOICE 03</span></div><small>フリーランス・30代</small></article>
@@ -212,18 +216,33 @@ const pageMarkup = String.raw`
         <p><span>本科カリキュラム</span><strong>9,800<small>円 / 月</small></strong></p>
         <p><span>6ヶ月総額目安</span><strong>108,600<small>円</small></strong></p>
         <small>入会金49,800円＋月額9,800円×6ヶ月</small>
-        <a class="hmr-cta-button hmr-cta-button--price" href="${LINE_CTA_URL}"><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
+        <a class="hmr-cta-button hmr-cta-button--price" ${LINE_CTA_ATTRIBUTES}><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
       </div>
     </section>
 
     <section id="faq" class="hmr-faq">
       <div class="hmr-faq-heading"><p class="hmr-section-no">08 / FAQ</p><h2><i>よくある質問</i></h2></div>
       <div class="hmr-faq-list">
-        <p><span>Q01</span>やりたいことが決まっていなくても参加できますか？<b>＋</b></p>
-        <p><span>Q02</span>仕事をしながら受講できますか？<b>＋</b></p>
-        <p><span>Q03</span>すべてオンラインで受講できますか？<b>＋</b></p>
-        <p><span>Q04</span>どのようなサポートがありますか？<b>＋</b></p>
-        <p><span>Q05</span>受講料金はいくらですか？<b>＋</b></p>
+        <details>
+          <summary><span>Q01</span><strong>やりたいことが決まっていなくても参加できますか？</strong><b aria-hidden="true">＋</b></summary>
+          <p>はい。HER MUSEは、答えが決まっている人だけのスクールではありません。「何か変えたいけれど、何から始めればいいか分からない」という状態から、考えを一緒に整理していきます。</p>
+        </details>
+        <details>
+          <summary><span>Q02</span><strong>仕事をしながら受講できますか？</strong><b aria-hidden="true">＋</b></summary>
+          <p>はい。1コマ約30分のオンライン学習を中心に、仕事や生活の予定に合わせて進められる設計です。短く学び、ワークと対話で少しずつ自分の言葉にしていきます。</p>
+        </details>
+        <details>
+          <summary><span>Q03</span><strong>すべてオンラインで受講できますか？</strong><b aria-hidden="true">＋</b></summary>
+          <p>はい。レッスン、ワーク、対話型セッションをオンラインで受講できます。場所に縛られず、自分の生活の中に学びを組み込めます。</p>
+        </details>
+        <details>
+          <summary><span>Q04</span><strong>どのようなサポートがありますか？</strong><b aria-hidden="true">＋</b></summary>
+          <p>メンターとの対話、学びを行動に整えるフィードバック、同じ問いを持つ仲間とつながるコミュニティがあります。答えを一方的に渡すのではなく、あなたの中にある言葉を一緒に見つけます。</p>
+        </details>
+        <details>
+          <summary><span>Q05</span><strong>受講料金はいくらですか？</strong><b aria-hidden="true">＋</b></summary>
+          <p>入会金49,800円、本科カリキュラムは月額9,800円です。6ヶ月受講した場合の総額目安は108,600円です。</p>
+        </details>
       </div>
     </section>
   </main>
