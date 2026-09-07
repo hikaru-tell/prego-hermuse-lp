@@ -1872,6 +1872,23 @@ button { font: inherit; }
   }
 }
 
+/* Responsive readability and content-sized sections. */
+#her-muse-reference-body-v2 .hmr-floating-cta span { flex: 1; text-align: center; }
+#her-muse-reference-body-v2 .hmr-floating-cta b { flex-shrink: 0; }
+#her-muse-reference-body-v2 a:focus-visible { outline: 3px solid var(--hmr-ink); outline-offset: 4px; }
+#her-muse-reference-body-v2 .hmr-benefits-grid article:nth-child(3n + 2) .hmr-benefit-icon { color: #9d5369; }
+#her-muse-reference-body-v2 .hmr-program { min-height: 0; }
+#her-muse-reference-body-v2 .hmr-voice-stage { align-items: flex-start; }
+#her-muse-reference-body-v2 .hmr-voice-stage article { min-height: 0; }
+#her-muse-reference-body-v2 .hmr-voice-stage article.hmr-voice-side { min-height: 0; }
+#her-muse-reference-body-v2 .hmr-voice-stage article > small { color: var(--hmr-ink); font-size: 12px; }
+@media (max-width: 767px) {
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-learning { min-height: 0; padding-bottom: 0; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-learning-bands { position: relative; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-voice-stage article { min-height: 0; }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-support-proof strong i { white-space: normal; }
+}
+
 /* Supplied HER MUSE key visual: responsive artwork with live stat and CTA layers. */
 #her-muse-reference-body-v2 .hmr-opening.hmr-kv {
   position: relative;
@@ -2044,6 +2061,7 @@ button { font: inherit; }
 }
 
 @media (max-width: 767px) {
+  #her-muse-reference-body-v2 .hmr-opening.hmr-kv,
   #her-muse-reference-body-v2 .hmr-page-sp .hmr-opening.hmr-kv {
     min-height: 0;
     aspect-ratio: 9 / 16;
@@ -2051,8 +2069,8 @@ button { font: inherit; }
   #her-muse-reference-body-v2 .hmr-kv-stat.hmr-kv-stat--below {
     min-height: 224px;
     padding: 54px 24px 30px;
-    grid-template-columns: minmax(104px, .72fr) minmax(0, 1.28fr);
-    column-gap: 30px;
+    grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: 24px;
     background: #ad596b;
   }
   #her-muse-reference-body-v2 .hmr-kv-stat-label {
@@ -2063,7 +2081,7 @@ button { font: inherit; }
   #her-muse-reference-body-v2 .hmr-kv-stat > strong {
     align-self: center;
     padding-top: 0;
-    font-size: clamp(62px, 18vw, 76px);
+    font-size: clamp(54px, 15vw, 66px);
   }
   #her-muse-reference-body-v2 .hmr-kv-stat > div {
     padding-left: 22px;
@@ -2072,6 +2090,9 @@ button { font: inherit; }
     font-size: clamp(12px, 3.3vw, 14px);
     line-height: 1.68;
   }
+  #her-muse-reference-body-v2 .hmr-kv-stat .hmr-copy-pc { display: none; }
+  #her-muse-reference-body-v2 .hmr-kv-stat .hmr-copy-sp { display: block; }
+  #her-muse-reference-body-v2 .hmr-kv-stat .hmr-copy-sp i { white-space: normal; }
   #her-muse-reference-body-v2 .hmr-kv-cta {
     top: 65%;
     right: auto;
