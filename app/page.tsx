@@ -22,32 +22,28 @@ const pageMarkup = String.raw`
     <span>ここから無料相談してみる</span><b aria-hidden="true">→</b>
   </a>
 <main id="top" class="hmr-page" data-hmr-page aria-label="HER MUSE 女性のための6ヶ月制オンラインカレッジ">
-    <section class="hmr-opening" aria-labelledby="opening-title">
-      <div class="hmr-opening-copy">
-        <p class="hmr-kicker hmr-opening-kicker">A fixed axis in a moving world.</p>
-        <h2 id="opening-title">
-          <span class="hmr-copy-pc"><i>変わる時代に、</i><i>変わらない</i><i>「自分軸」を。</i></span>
-          <span class="hmr-copy-sp"><i>変わる時代に、</i><i>変わらない</i><i>「自分軸」を。</i></span>
-        </h2>
-        <p class="hmr-opening-lead">社会と自分を知り、自分の軸を言葉にする6ヶ月。</p>
-        <div class="hmr-opening-actions">
-          <a class="hmr-cta-button" ${LINE_CTA_ATTRIBUTES}><span>まずはLINEで無料相談</span><b aria-hidden="true">→</b></a>
-          <small>やりたいことが決まっていなくても大丈夫</small>
-        </div>
-      </div>
-      <div class="hmr-opening-photo" role="img" aria-label="チューリップを抱える女性の写真"></div>
-    </section>
+    <section class="hmr-opening hmr-kv" aria-labelledby="opening-title">
+      <h1 id="opening-title" class="hmr-kv-sr">変わる時代に、変わらない「自分軸」を。</h1>
+      <picture class="hmr-kv-media" aria-hidden="true">
+        <source media="(max-width: 767px)" srcset="/her-muse-kv-sp.webp">
+        <img src="/her-muse-kv-pc.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+      </picture>
 
-    <section class="hmr-work-stat" aria-label="働くことに関する調査結果">
-      <p class="hmr-work-stat-label">WHY WE WORK</p>
-      <strong>75.2<span>%</span></strong>
-      <div>
-        <p>
-          <span class="hmr-copy-pc"><i>「いったい自分は、</i><i>なんのために働いているのだろう」</i><i>と感じたことがある。</i></span>
-          <span class="hmr-copy-sp"><i>「いったい自分は、</i><i>なんのために働いて</i><i>いるのだろう」と</i><i>感じたことがある。</i></span>
-        </p>
-        <small>出典：doda「なんのために働くのか？」15,000人調査（2024年）</small>
-      </div>
+      <aside class="hmr-kv-stat" aria-label="働くことに関する調査結果">
+        <p class="hmr-kv-stat-label">WHY WE WORK</p>
+        <strong>75.2<span>%</span></strong>
+        <div>
+          <p>
+            <span class="hmr-copy-pc"><i>「いったい自分は、</i><i>なんのために働いているのだろう」</i><i>と感じたことがある人</i></span>
+            <span class="hmr-copy-sp"><i>「いったい自分は、</i><i>なんのために働いて</i><i>いるのだろう」と</i><i>感じたことがある人</i></span>
+          </p>
+          <small>出典：doda「なんのために働くのか？」15,000人調査（2024年）</small>
+        </div>
+      </aside>
+
+      <a class="hmr-kv-cta" ${LINE_CTA_ATTRIBUTES} aria-label="まずはLINEで無料相談">
+        <span>まずはLINEで無料相談</span><b aria-hidden="true">→</b>
+      </a>
     </section>
 
     <section class="hmr-problem">
