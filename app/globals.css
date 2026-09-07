@@ -1797,6 +1797,8 @@ button { font: inherit; }
   min-height: 44px;
 }
 #her-muse-reference-body-v2 .hmr-floating-cta {
+  right: auto;
+  left: 50%;
   min-width: 300px;
   min-height: 64px;
   padding: 0 0 0 24px;
@@ -1808,6 +1810,10 @@ button { font: inherit; }
   box-shadow: 0 14px 34px rgba(117, 43, 61, .26);
   font-size: 14px;
   letter-spacing: .035em;
+  transform: translate(-50%, 18px);
+}
+#her-muse-reference-body-v2 .hmr-floating-cta.is-visible {
+  transform: translate(-50%, 0);
 }
 #her-muse-reference-body-v2 .hmr-floating-cta b {
   width: 54px;
@@ -1820,6 +1826,7 @@ button { font: inherit; }
 #her-muse-reference-body-v2 .hmr-floating-cta:hover {
   background: var(--hmr-cta-strong-hover);
   box-shadow: 0 17px 36px rgba(117, 43, 61, .28);
+  transform: translate(-50%, -3px);
 }
 
 @media (max-width: 767px) {
@@ -1847,11 +1854,17 @@ button { font: inherit; }
     min-height: 56px;
   }
   #her-muse-reference-body-v2 .hmr-floating-cta {
+    right: 24px;
+    left: 24px;
+    width: auto;
     min-width: 0;
     min-height: 58px;
     padding-left: 20px;
     font-size: 13px;
+    transform: translateY(18px);
   }
+  #her-muse-reference-body-v2 .hmr-floating-cta.is-visible { transform: translateY(0); }
+  #her-muse-reference-body-v2 .hmr-floating-cta:hover { transform: translateY(-3px); }
   #her-muse-reference-body-v2 .hmr-floating-cta b {
     width: 50px;
     height: 56px;
