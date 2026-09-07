@@ -3,6 +3,8 @@
   --hmr-ink: #171512;
   --hmr-red: #f0c8d8;
   --hmr-cta: #d3e668;
+  --hmr-cta-strong: #a9475b;
+  --hmr-cta-strong-hover: #8f394d;
   --hmr-blue-dark: #171512;
   --hmr-blue: #c9dcf0;
   --hmr-lime: #d3e668;
@@ -1740,4 +1742,118 @@ button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   #her-muse-reference-body-v2 .hmr-voice-stage article,
   #her-muse-reference-body-v2 .hmr-voice-controls button { transition: none; }
+}
+
+/* CTA: SHElikes-inspired high-contrast conversion pattern in HER MUSE colors. */
+#her-muse-reference-body-v2 .hmr-header-cta,
+#her-muse-reference-body-v2 .hmr-cta-button,
+#her-muse-reference-body-v2 .hmr-cta-button--light,
+#her-muse-reference-body-v2 .hmr-cta-button--price {
+  min-height: 60px;
+  padding: 0 0 0 24px;
+  gap: 20px;
+  border: 1px solid var(--hmr-cta-strong);
+  border-radius: 4px;
+  color: #fff;
+  background: var(--hmr-cta-strong);
+  box-shadow: 0 12px 28px rgba(117, 43, 61, .2);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .035em;
+}
+#her-muse-reference-body-v2 .hmr-header-cta b,
+#her-muse-reference-body-v2 .hmr-cta-button b,
+#her-muse-reference-body-v2 .hmr-cta-button--light b,
+#her-muse-reference-body-v2 .hmr-cta-button--price b {
+  display: grid;
+  width: 52px;
+  height: 100%;
+  min-height: 58px;
+  place-items: center;
+  border-left: 1px solid rgba(255, 255, 255, .38);
+  border-radius: 0;
+  color: #fff;
+  background: transparent;
+  font-size: 16px;
+}
+#her-muse-reference-body-v2 .hmr-header-cta:hover,
+#her-muse-reference-body-v2 .hmr-cta-button:hover,
+#her-muse-reference-body-v2 .hmr-cta-button--light:hover,
+#her-muse-reference-body-v2 .hmr-cta-button--price:hover {
+  border-color: var(--hmr-cta-strong-hover);
+  color: #fff;
+  background: var(--hmr-cta-strong-hover);
+  box-shadow: 0 15px 32px rgba(117, 43, 61, .24);
+  transform: translateY(-2px);
+}
+#her-muse-reference-body-v2 .hmr-header-cta {
+  min-height: 46px;
+  padding-left: 18px;
+  font-size: 12px;
+  box-shadow: none;
+}
+#her-muse-reference-body-v2 .hmr-header-cta b {
+  width: 42px;
+  min-height: 44px;
+}
+#her-muse-reference-body-v2 .hmr-floating-cta {
+  min-width: 300px;
+  min-height: 64px;
+  padding: 0 0 0 24px;
+  gap: 18px;
+  border: 1px solid var(--hmr-cta-strong);
+  border-radius: 4px;
+  color: #fff;
+  background: var(--hmr-cta-strong);
+  box-shadow: 0 14px 34px rgba(117, 43, 61, .26);
+  font-size: 14px;
+  letter-spacing: .035em;
+}
+#her-muse-reference-body-v2 .hmr-floating-cta b {
+  width: 54px;
+  height: 62px;
+  border-left: 1px solid rgba(255, 255, 255, .38);
+  border-radius: 0;
+  color: #fff;
+  background: transparent;
+}
+#her-muse-reference-body-v2 .hmr-floating-cta:hover {
+  background: var(--hmr-cta-strong-hover);
+  box-shadow: 0 17px 36px rgba(117, 43, 61, .28);
+}
+
+@media (max-width: 767px) {
+  #her-muse-reference-body-v2 .hmr-header-cta {
+    min-height: 40px;
+    padding-left: 13px;
+    gap: 8px;
+    font-size: 10px;
+  }
+  #her-muse-reference-body-v2 .hmr-header-cta b {
+    width: 34px;
+    min-height: 38px;
+  }
+  #her-muse-reference-body-v2 .hmr-cta-button,
+  #her-muse-reference-body-v2 .hmr-cta-button--light,
+  #her-muse-reference-body-v2 .hmr-cta-button--price {
+    min-height: 58px;
+    padding-left: 20px;
+    font-size: 13px;
+  }
+  #her-muse-reference-body-v2 .hmr-cta-button b,
+  #her-muse-reference-body-v2 .hmr-cta-button--light b,
+  #her-muse-reference-body-v2 .hmr-cta-button--price b {
+    width: 48px;
+    min-height: 56px;
+  }
+  #her-muse-reference-body-v2 .hmr-floating-cta {
+    min-width: 0;
+    min-height: 58px;
+    padding-left: 20px;
+    font-size: 13px;
+  }
+  #her-muse-reference-body-v2 .hmr-floating-cta b {
+    width: 50px;
+    height: 56px;
+  }
 }

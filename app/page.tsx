@@ -16,10 +16,10 @@ const pageMarkup = String.raw`
       <a href="#price">料金</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="hmr-header-cta" ${LINE_CTA_ATTRIBUTES}><span>LINEで無料相談</span><b aria-hidden="true">→</b></a>
+    <a class="hmr-header-cta" ${LINE_CTA_ATTRIBUTES}><span>まずはLINEで無料相談</span><b aria-hidden="true">→</b></a>
   </header>
   <a class="hmr-floating-cta" ${LINE_CTA_ATTRIBUTES}>
-    <span><small>何から始めるか、一緒に整理する</small>LINEで無料相談</span><b aria-hidden="true">→</b>
+    <span>ここから無料相談してみる</span><b aria-hidden="true">→</b>
   </a>
 <main id="top" class="hmr-page" data-hmr-page aria-label="HER MUSE 女性のための6ヶ月制オンラインカレッジ">
     <section class="hmr-opening" aria-labelledby="opening-title">
@@ -31,7 +31,7 @@ const pageMarkup = String.raw`
         </h2>
         <p class="hmr-opening-lead">社会と自分を知り、自分の軸を言葉にする6ヶ月。</p>
         <div class="hmr-opening-actions">
-          <a class="hmr-cta-button" ${LINE_CTA_ATTRIBUTES}><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
+          <a class="hmr-cta-button" ${LINE_CTA_ATTRIBUTES}><span>まずはLINEで無料相談</span><b aria-hidden="true">→</b></a>
           <small>やりたいことが決まっていなくても大丈夫</small>
         </div>
       </div>
@@ -148,7 +148,7 @@ const pageMarkup = String.raw`
         </h2>
         <small>答えを渡すのではなく、あなたの中にある言葉を一緒に見つけます。</small>
       </div>
-      <a class="hmr-cta-button hmr-cta-button--light" ${LINE_CTA_ATTRIBUTES}><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
+      <a class="hmr-cta-button hmr-cta-button--light" ${LINE_CTA_ATTRIBUTES}><span>まずはLINEで無料相談</span><b aria-hidden="true">→</b></a>
     </section>
 
     <section class="hmr-learning">
@@ -223,7 +223,7 @@ const pageMarkup = String.raw`
         <p><span>本科カリキュラム</span><strong>9,800<small>円 / 月</small></strong></p>
         <p><span>6ヶ月総額目安</span><strong>108,600<small>円</small></strong></p>
         <small>入会金49,800円＋月額9,800円×6ヶ月</small>
-        <a class="hmr-cta-button hmr-cta-button--price" ${LINE_CTA_ATTRIBUTES}><span>LINEで無料相談する</span><b aria-hidden="true">→</b></a>
+        <a class="hmr-cta-button hmr-cta-button--price" ${LINE_CTA_ATTRIBUTES}><span>まずはLINEで無料相談</span><b aria-hidden="true">→</b></a>
       </div>
     </section>
 
