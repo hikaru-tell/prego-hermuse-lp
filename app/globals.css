@@ -1799,7 +1799,8 @@ button { font: inherit; }
 #her-muse-reference-body-v2 .hmr-floating-cta {
   right: auto;
   left: 50%;
-  min-width: 300px;
+  width: min(420px, calc(100vw - 80px));
+  min-width: 0;
   min-height: 64px;
   padding: 0 0 0 24px;
   gap: 18px;
@@ -1854,8 +1855,8 @@ button { font: inherit; }
     min-height: 56px;
   }
   #her-muse-reference-body-v2 .hmr-floating-cta {
-    right: 24px;
-    left: 24px;
+    right: clamp(30px, 10vw, 40px);
+    left: clamp(30px, 10vw, 40px);
     width: auto;
     min-width: 0;
     min-height: 58px;
