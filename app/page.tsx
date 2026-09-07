@@ -29,7 +29,12 @@ const pageMarkup = String.raw`
         <img src="/her-muse-kv-pc.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
       </picture>
 
-      <aside class="hmr-kv-stat" aria-label="働くことに関する調査結果">
+      <a class="hmr-kv-cta" ${LINE_CTA_ATTRIBUTES} aria-label="まずはLINEで無料相談">
+        <span>まずはLINEで無料相談</span><b aria-hidden="true">→</b>
+      </a>
+    </section>
+
+    <section class="hmr-kv-stat hmr-kv-stat--below" aria-label="働くことに関する調査結果">
         <p class="hmr-kv-stat-label">WHY WE WORK</p>
         <strong>75.2<span>%</span></strong>
         <div>
@@ -37,13 +42,8 @@ const pageMarkup = String.raw`
             <span class="hmr-copy-pc"><i>「いったい自分は、</i><i>なんのために働いているのだろう」</i><i>と感じたことがある人</i></span>
             <span class="hmr-copy-sp"><i>「いったい自分は、</i><i>なんのために働いて</i><i>いるのだろう」と</i><i>感じたことがある人</i></span>
           </p>
-          <small>出典：doda「なんのために働くのか？」15,000人調査（2024年）</small>
         </div>
-      </aside>
-
-      <a class="hmr-kv-cta" ${LINE_CTA_ATTRIBUTES} aria-label="まずはLINEで無料相談">
-        <span>まずはLINEで無料相談</span><b aria-hidden="true">→</b>
-      </a>
+        <small class="hmr-kv-stat-source">出典：doda「なんのために働くのか？」15,000人調査（2024年）</small>
     </section>
 
     <section class="hmr-problem">
