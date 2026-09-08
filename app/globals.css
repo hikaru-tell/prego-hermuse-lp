@@ -1882,6 +1882,18 @@ button { font: inherit; }
 #her-muse-reference-body-v2 .hmr-voice-stage article { min-height: 0; }
 #her-muse-reference-body-v2 .hmr-voice-stage article.hmr-voice-side { min-height: 0; }
 #her-muse-reference-body-v2 .hmr-voice-stage article > small { color: var(--hmr-ink); font-size: 12px; }
+@media (min-width: 1101px) {
+  #her-muse-reference-body-v2 .hmr-after-stage article {
+    aspect-ratio: .86 / 1;
+  }
+  #her-muse-reference-body-v2 .hmr-after-stage strong {
+    margin: clamp(48px, 4vw, 66px) 0 22px;
+  }
+  #her-muse-reference-body-v2 .hmr-after-card-photo {
+    min-height: 0;
+    flex: 1 1 auto;
+  }
+}
 @media (max-width: 767px) {
   #her-muse-reference-body-v2 .hmr-page-sp .hmr-learning { min-height: 0; padding-bottom: 0; }
   #her-muse-reference-body-v2 .hmr-page-sp .hmr-learning-bands { position: relative; }
