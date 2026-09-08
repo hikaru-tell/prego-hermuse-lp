@@ -18,21 +18,22 @@ export default function VoiceCarouselEnhancer() {
       card.dataset.voiceIndex = String(index);
     });
 
-    const firstClone = originals[0].cloneNode(true) as HTMLElement;
-    const lastClone = originals[2].cloneNode(true) as HTMLElement;
-    firstClone.dataset.voiceClone = "true";
-    lastClone.dataset.voiceClone = "true";
-    firstClone.tabIndex = -1;
-    lastClone.tabIndex = -1;
-    firstClone.setAttribute("aria-hidden", "true");
-    lastClone.setAttribute("aria-hidden", "true");
-    stage.prepend(lastClone);
-    stage.append(firstClone);
+    const makeClones = () =>
+      originals.map((card) => {
+        const clone = card.cloneNode(true) as HTMLElement;
+        clone.dataset.voiceClone = "true";
+        clone.tabIndex = -1;
+        clone.setAttribute("aria-hidden", "true");
+        return clone;
+      });
+    const leadingClones = makeClones();
+    const trailingClones = makeClones();
+    stage.prepend(...leadingClones);
+    stage.append(...trailingClones);
 
     const cards = Array.from(stage.querySelectorAll<HTMLElement>("[data-voice-card]"));
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let activePosition = 2;
-    let scrollTimer = 0;
+    let activePosition = 4;
     let animationFrame = 0;
 
     const cardLeft = (card: HTMLElement) =>
@@ -67,24 +68,22 @@ export default function VoiceCarouselEnhancer() {
       }, 0);
     };
 
-    const normalizeLoop = () => {
-      const position = nearestPosition();
-      if (position === 0) {
-        centerCard(3, false);
-      } else if (position === cards.length - 1) {
-        centerCard(1, false);
-      } else if (Math.abs(stage.scrollLeft - cardLeft(cards[position])) > 1) {
-        centerCard(position);
-      } else {
-        updateActive(position);
+    const keepInsideLoop = () => {
+      const cycleWidth = cards[6].offsetLeft - cards[3].offsetLeft;
+      if (!cycleWidth) return;
+      const leftBoundary = cardLeft(cards[1]);
+      const rightBoundary = cardLeft(cards[7]);
+      if (stage.scrollLeft <= leftBoundary) {
+        stage.scrollLeft += cycleWidth;
+      } else if (stage.scrollLeft >= rightBoundary) {
+        stage.scrollLeft -= cycleWidth;
       }
     };
 
     const onScroll = () => {
+      keepInsideLoop();
       window.cancelAnimationFrame(animationFrame);
       animationFrame = window.requestAnimationFrame(() => updateActive(nearestPosition()));
-      window.clearTimeout(scrollTimer);
-      scrollTimer = window.setTimeout(normalizeLoop, 180);
     };
 
     const onStageClick = (event: MouseEvent) => {
@@ -116,7 +115,7 @@ export default function VoiceCarouselEnhancer() {
     previous.addEventListener("click", onPrevious);
     next.addEventListener("click", onNext);
     resizeObserver.observe(stage);
-    centerCard(2, false);
+    centerCard(4, false);
 
     return () => {
       stage.removeEventListener("scroll", onScroll);
@@ -125,10 +124,8 @@ export default function VoiceCarouselEnhancer() {
       previous.removeEventListener("click", onPrevious);
       next.removeEventListener("click", onNext);
       resizeObserver.disconnect();
-      window.clearTimeout(scrollTimer);
       window.cancelAnimationFrame(animationFrame);
-      firstClone.remove();
-      lastClone.remove();
+      [...leadingClones, ...trailingClones].forEach((clone) => clone.remove());
     };
   }, []);
 
