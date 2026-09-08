@@ -1887,7 +1887,7 @@ button { font: inherit; }
     aspect-ratio: .86 / 1;
   }
   #her-muse-reference-body-v2 .hmr-after-stage strong {
-    margin: clamp(48px, 4vw, 66px) 0 22px;
+    margin: clamp(26px, 2vw, 36px) 0 22px;
   }
   #her-muse-reference-body-v2 .hmr-after-card-photo {
     min-height: 0;
