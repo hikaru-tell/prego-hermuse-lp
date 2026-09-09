@@ -24,6 +24,9 @@
   --hmr-photo-voice-mentor: url("/her-muse-voice-mentor.webp");
   --hmr-photo-voice-reflection: url("/her-muse-voice-reflection.webp");
   --hmr-photo-voice-laptop: url("/her-muse-voice-laptop.webp");
+  --hmr-photo-after-01: url("/her-muse-after-01.webp");
+  --hmr-photo-after-02: url("/her-muse-after-02.webp");
+  --hmr-photo-after-03: url("/her-muse-after-03.webp");
   --hmr-photo-people: url("/her-muse-people.webp");
 }
 
@@ -493,9 +496,9 @@ button { font: inherit; }
     background-size: cover;
     background-repeat: no-repeat;
   }
-  #her-muse-reference-body-v2 .hmr-after-card-photo--01 { background-image: var(--hmr-photo-voice-writing); }
-  #her-muse-reference-body-v2 .hmr-after-card-photo--02 { background-image: var(--hmr-photo-voice-laptop); }
-  #her-muse-reference-body-v2 .hmr-after-card-photo--03 { background-image: var(--hmr-photo-voice-mentor); }
+  #her-muse-reference-body-v2 .hmr-after-card-photo--01 { background-image: var(--hmr-photo-after-01); }
+  #her-muse-reference-body-v2 .hmr-after-card-photo--02 { background-image: var(--hmr-photo-after-02); }
+  #her-muse-reference-body-v2 .hmr-after-card-photo--03 { background-image: var(--hmr-photo-after-03); }
 
   #her-muse-reference-body-v2 .hmr-support-visual {
     min-height: 480px;
@@ -1750,9 +1753,9 @@ button { font: inherit; }
   background-size: cover;
   background-repeat: no-repeat;
 }
-#her-muse-reference-body-v2 .hmr-after-card-photo--01 { background-position: 50% 34%; }
-#her-muse-reference-body-v2 .hmr-after-card-photo--02 { background-position: 58% 42%; }
-#her-muse-reference-body-v2 .hmr-after-card-photo--03 { background-position: 50% 38%; }
+#her-muse-reference-body-v2 .hmr-after-card-photo--01 { background-position: 50% 50%; }
+#her-muse-reference-body-v2 .hmr-after-card-photo--02 { background-position: 50% 38%; }
+#her-muse-reference-body-v2 .hmr-after-card-photo--03 { background-position: 50% 48%; }
 @media (min-width: 1101px) {
   #her-muse-reference-body-v2 .hmr-after-card-photo {
     flex: 0 0 auto;

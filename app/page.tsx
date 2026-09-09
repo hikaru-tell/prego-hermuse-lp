@@ -68,9 +68,9 @@ const pageMarkup = String.raw`
         <span class="hmr-copy-sp"><i>6ヶ月後、</i><i>「正解を探す」から</i><i>「自分の軸で選ぶ」へ。</i></span>
       </h2>
       <div class="hmr-after-stage">
-        <article><div class="hmr-after-meta"><b>01</b><small>VALUE</small></div><strong><i>自分が大切にしたい</i><i>基準を言葉にできる</i></strong><div class="hmr-after-card-photo hmr-after-card-photo--01" role="img" aria-label="ノートに考えを書き出す女性"></div></article>
-        <article><div class="hmr-after-meta"><b>02</b><small>ACTION</small></div><strong><i>次に試す行動を</i><i>ひとつ決められる</i></strong><div class="hmr-after-card-photo hmr-after-card-photo--02" role="img" aria-label="パソコンで仕事をする女性"></div></article>
-        <article><div class="hmr-after-meta"><b>03</b><small>MESSAGE</small></div><strong><i>経験や強みを</i><i>届く価値に変えられる</i></strong><div class="hmr-after-card-photo hmr-after-card-photo--03" role="img" aria-label="対話しながら自分の言葉を見つける女性"></div></article>
+        <article><div class="hmr-after-meta"><b>01</b><small>VALUE</small></div><strong><i>自分が大切にしたい</i><i>基準を言葉にできる</i></strong><div class="hmr-after-card-photo hmr-after-card-photo--01" role="img" aria-label="パソコンに向かって考える女性"></div></article>
+        <article><div class="hmr-after-meta"><b>02</b><small>ACTION</small></div><strong><i>次に試す行動を</i><i>ひとつ決められる</i></strong><div class="hmr-after-card-photo hmr-after-card-photo--02" role="img" aria-label="パソコンを持って笑顔を見せる女性"></div></article>
+        <article><div class="hmr-after-meta"><b>03</b><small>MESSAGE</small></div><strong><i>経験や強みを</i><i>届く価値に変えられる</i></strong><div class="hmr-after-card-photo hmr-after-card-photo--03" role="img" aria-label="対話しながら考えを伝える女性たち"></div></article>
       </div>
       <p class="hmr-after-note"><span>「もう十分」を土台に、</span><strong>「もっと良くなれる」自分へ。</strong></p>
     </section>
