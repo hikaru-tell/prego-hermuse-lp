@@ -21,7 +21,8 @@
   --hmr-photo-stretch: url("/her-muse-stretch.webp");
   --hmr-photo-support: url("/her-muse-support.webp");
   --hmr-photo-voice-writing: url("/her-muse-voice-writing.webp");
-  --hmr-photo-voice-mentor: url("/her-muse-voice-reflection.webp");
+  --hmr-photo-voice-mentor: url("/her-muse-voice-mentor.webp");
+  --hmr-photo-voice-reflection: url("/her-muse-voice-reflection.webp");
   --hmr-photo-voice-laptop: url("/her-muse-voice-laptop.webp");
   --hmr-photo-people: url("/her-muse-people.webp");
 }
@@ -1676,7 +1677,7 @@ button { font: inherit; }
   background: linear-gradient(rgba(39,52,58,.04),rgba(39,52,58,.18)), var(--hmr-photo-voice-writing) center / cover no-repeat;
 }
 #her-muse-reference-body-v2 .hmr-voice-stage .hmr-voice--02 > div {
-  background: linear-gradient(rgba(39,52,58,.02),rgba(39,52,58,.16)), var(--hmr-photo-voice-mentor) center / cover no-repeat;
+  background: linear-gradient(rgba(39,52,58,.02),rgba(39,52,58,.16)), var(--hmr-photo-voice-reflection) center / cover no-repeat;
 }
 #her-muse-reference-body-v2 .hmr-voice-stage .hmr-voice--03 > div {
   background: linear-gradient(rgba(39,52,58,.03),rgba(39,52,58,.2)), var(--hmr-photo-voice-laptop) center / cover no-repeat;
@@ -1737,6 +1738,38 @@ button { font: inherit; }
   }
   #her-muse-reference-body-v2 .hmr-voice-controls { margin-top: 8px; }
   #her-muse-reference-body-v2 .hmr-voice-controls button { width: 42px; height: 42px; }
+}
+
+/* AFTER 6 MONTHS: keep each outcome photo in a true 9:16 portrait frame. */
+#her-muse-reference-body-v2 .hmr-after-card-photo {
+  width: clamp(118px, 38%, 210px);
+  aspect-ratio: 9 / 16;
+  flex: 0 0 auto;
+  align-self: center;
+  margin-top: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#her-muse-reference-body-v2 .hmr-after-card-photo--01 { background-position: 50% 34%; }
+#her-muse-reference-body-v2 .hmr-after-card-photo--02 { background-position: 58% 42%; }
+#her-muse-reference-body-v2 .hmr-after-card-photo--03 { background-position: 50% 38%; }
+@media (min-width: 1101px) {
+  #her-muse-reference-body-v2 .hmr-after-card-photo {
+    flex: 0 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-after-stage article {
+    aspect-ratio: .74 / 1;
+  }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-after-stage strong {
+    margin: 24px 0 16px;
+  }
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-after-card-photo {
+    width: clamp(128px, 44%, 152px);
+    aspect-ratio: 9 / 16;
+    flex-basis: auto;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1891,7 +1924,7 @@ button { font: inherit; }
   }
   #her-muse-reference-body-v2 .hmr-after-card-photo {
     min-height: 0;
-    flex: 1 1 auto;
+    flex: 0 0 auto;
   }
 }
 @media (max-width: 767px) {
