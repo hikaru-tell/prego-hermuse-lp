@@ -902,8 +902,8 @@ button { font: inherit; }
 /* Desktop presentation: scale the complete canvas to 80%, including its width. */
 @media (min-width: 1101px) {
   #her-muse-reference-body-v2 {
-    width: 100%;
-    margin-inline: 12.5%;
+    width: 80%;
+    margin-inline: auto;
     zoom: .8;
   }
 }
