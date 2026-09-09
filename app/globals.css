@@ -1740,10 +1740,10 @@ button { font: inherit; }
   #her-muse-reference-body-v2 .hmr-voice-controls button { width: 42px; height: 42px; }
 }
 
-/* AFTER 6 MONTHS: keep each outcome photo in a true 9:16 portrait frame. */
+/* AFTER 6 MONTHS: keep each outcome photo in a true 16:9 frame. */
 #her-muse-reference-body-v2 .hmr-after-card-photo {
-  width: clamp(118px, 38%, 210px);
-  aspect-ratio: 9 / 16;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   flex: 0 0 auto;
   align-self: center;
   margin-top: auto;
@@ -1760,14 +1760,14 @@ button { font: inherit; }
 }
 @media (max-width: 767px) {
   #her-muse-reference-body-v2 .hmr-page-sp .hmr-after-stage article {
-    aspect-ratio: .74 / 1;
+    aspect-ratio: .92 / 1;
   }
   #her-muse-reference-body-v2 .hmr-page-sp .hmr-after-stage strong {
     margin: 24px 0 16px;
   }
   #her-muse-reference-body-v2 .hmr-page-sp .hmr-after-card-photo {
-    width: clamp(128px, 44%, 152px);
-    aspect-ratio: 9 / 16;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     flex-basis: auto;
   }
 }
