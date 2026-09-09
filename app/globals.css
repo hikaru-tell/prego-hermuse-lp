@@ -899,6 +899,15 @@ button { font: inherit; }
   }
 }
 
+/* Desktop presentation: scale the complete canvas to 80%, including its width. */
+@media (min-width: 1101px) {
+  #her-muse-reference-body-v2 {
+    width: 100%;
+    margin-inline: 12.5%;
+    zoom: .8;
+  }
+}
+
 /* Refined heading scale */
 #her-muse-reference-body-v2 .hmr-opening h2 {
   font-size: clamp(29px, 3.8vw, 56px);
