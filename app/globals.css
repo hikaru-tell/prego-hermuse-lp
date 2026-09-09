@@ -19,7 +19,7 @@
   --hmr-photo-tulips: url("/her-muse-tulips.webp");
   --hmr-photo-bokeh: url("/hero-bokeh.webp");
   --hmr-photo-stretch: url("/her-muse-stretch.webp");
-  --hmr-photo-support: url("/her-muse-support.webp");
+  --hmr-photo-support: url("/her-muse-mentoring.webp");
   --hmr-photo-voice-writing: url("/her-muse-voice-writing.webp");
   --hmr-photo-voice-mentor: url("/her-muse-voice-mentor.webp");
   --hmr-photo-voice-reflection: url("/her-muse-voice-reflection.webp");
@@ -27,6 +27,9 @@
   --hmr-photo-after-01: url("/her-muse-after-01.webp");
   --hmr-photo-after-02: url("/her-muse-after-02.webp");
   --hmr-photo-after-03: url("/her-muse-after-03.webp");
+  --hmr-photo-story-01: url("/her-muse-story-01.webp");
+  --hmr-photo-story-02: url("/her-muse-story-02.webp");
+  --hmr-photo-story-03: url("/her-muse-story-03.webp");
   --hmr-photo-people: url("/her-muse-people.webp");
 }
 
@@ -1677,13 +1680,22 @@ button { font: inherit; }
   outline-offset: 4px;
 }
 #her-muse-reference-body-v2 .hmr-voice-stage .hmr-voice--01 > div {
-  background: linear-gradient(rgba(39,52,58,.04),rgba(39,52,58,.18)), var(--hmr-photo-voice-writing) center / cover no-repeat;
+  background: linear-gradient(rgba(39,52,58,.04),rgba(39,52,58,.18)), var(--hmr-photo-story-01) 50% 42% / cover no-repeat;
 }
 #her-muse-reference-body-v2 .hmr-voice-stage .hmr-voice--02 > div {
-  background: linear-gradient(rgba(39,52,58,.02),rgba(39,52,58,.16)), var(--hmr-photo-voice-reflection) center / cover no-repeat;
+  background: linear-gradient(rgba(39,52,58,.02),rgba(39,52,58,.16)), var(--hmr-photo-story-02) 50% 40% / cover no-repeat;
 }
 #her-muse-reference-body-v2 .hmr-voice-stage .hmr-voice--03 > div {
-  background: linear-gradient(rgba(39,52,58,.03),rgba(39,52,58,.2)), var(--hmr-photo-voice-laptop) center / cover no-repeat;
+  background: linear-gradient(rgba(39,52,58,.03),rgba(39,52,58,.2)), var(--hmr-photo-story-03) 50% 44% / cover no-repeat;
+}
+
+#her-muse-reference-body-v2 .hmr-support-photo {
+  background-position: 50% 48%;
+}
+@media (max-width: 767px) {
+  #her-muse-reference-body-v2 .hmr-page-sp .hmr-support-photo {
+    background-position: 43% 50%;
+  }
 }
 #her-muse-reference-body-v2 .hmr-voice-controls {
   display: flex;
