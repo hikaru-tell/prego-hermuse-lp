@@ -4,17 +4,9 @@ import { useEffect } from "react";
 
 export function MotionEnhancer() {
   useEffect(() => {
-    const page = document.querySelector<HTMLElement>(".hmr-page");
     const opening = document.querySelector<HTMLElement>(".hmr-opening");
     const floatingCta = document.querySelector<HTMLElement>(".hmr-floating-cta");
-    const media = window.matchMedia("(max-width: 767px)");
-
-    const syncLayout = () => {
-      page?.classList.toggle("hmr-page-sp", media.matches);
-    };
-
-    syncLayout();
-    media.addEventListener("change", syncLayout);
+    const sections = document.querySelectorAll<HTMLElement>(".hmr-page > section");
 
     const openingObserver = opening
       ? new IntersectionObserver(
@@ -25,9 +17,22 @@ export function MotionEnhancer() {
 
     if (opening) openingObserver?.observe(opening);
 
+    // 背景写真は画面に近づいたセクションだけ読み込む（globals.css の data-hmr-near 参照）
+    const nearObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          (entry.target as HTMLElement).dataset.hmrNear = "";
+          nearObserver.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "800px 0px" },
+    );
+    sections.forEach((section) => nearObserver.observe(section));
+
     return () => {
-      media.removeEventListener("change", syncLayout);
       openingObserver?.disconnect();
+      nearObserver.disconnect();
     };
   }, []);
 

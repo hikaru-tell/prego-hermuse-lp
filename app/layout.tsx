@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { MotionEnhancer } from "@/components/motion-enhancer";
-import { anton, dmSans, playfairDisplay, shipporiMincho } from "./fonts";
+import { anton, dmSans, shipporiMincho } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="ja"
-      className={`${anton.variable} ${dmSans.variable} ${playfairDisplay.variable} ${shipporiMincho.variable}`}
+      className={`${anton.variable} ${dmSans.variable} ${shipporiMincho.variable}`}
     >
       <body>
         <MotionEnhancer />
